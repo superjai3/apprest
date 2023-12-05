@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcPlato.Data;
 using apprest.Models;
+using Microsoft.Extensions.Logging.Abstractions;
+using apprest.ViewModels;
 
 namespace apprest.Controllers
 {
@@ -20,9 +22,31 @@ namespace apprest.Controllers
         }
 
         // GET: Plato
-        public async Task<IActionResult> Index()
+        /*public async Task<IActionResult> Index()
         {
             return View(await _context.Platos.ToListAsync());
+        }*/
+
+         public async Task<IActionResult> Index()
+        {
+            var platoListViewModel = new List<PlatoViewModel>();
+
+            if (_context.Platos == null){
+                    Problem("Emtity set 'MvcPlatoContext.Plato' is null.");
+                    }
+            var platos = await _context.Platos.ToListAsync();
+
+            foreach (var item in platos)
+            {
+                platoListViewModel.Add(
+                    new PlatoViewModel {
+                        Name = item.Name,
+                        Pais = item.Pais,
+                        Price = item.Price
+                    }
+                );
+            }
+            return View(platoListViewModel);
         }
 
         // GET: Plato/Details/5

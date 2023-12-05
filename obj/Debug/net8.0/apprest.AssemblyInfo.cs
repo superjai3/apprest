@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("apprest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8e9056cdd5804cf66618cabd601997b24b905cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46ac920bac56fbc24937a388d981008e81076e28")]
 [assembly: System.Reflection.AssemblyProductAttribute("apprest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("apprest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
