@@ -276,3 +276,4 @@ C:\Users\andru\Herramientas\apprest\obj\Debug\net8.0\refint\apprest.dll
 C:\Users\andru\Herramientas\apprest\obj\Debug\net8.0\apprest.pdb
 C:\Users\andru\Herramientas\apprest\obj\Debug\net8.0\apprest.genruntimeconfig.cache
 C:\Users\andru\Herramientas\apprest\obj\Debug\net8.0\ref\apprest.dll
+C:\Users\andru\Herramientas\apprest\obj\Debug\net8.0\apprest.sourcelink.json
