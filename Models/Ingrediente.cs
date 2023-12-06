@@ -5,6 +5,8 @@ namespace apprest.Models
         public int Id { get; set; }
         public string? Name { get; set; }
         public decimal Price { get; set; }
-        public virtual ICollection<Plato> Platos { get; set; }
+
+        // Marcar la propiedad con Nullable si puede ser nula
+        public virtual ICollection<Plato>? Platos { get; set; }
     }
 }

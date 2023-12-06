@@ -1,20 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using MvcCliente.Data;
 using apprest.Models;
+using MvcPlato.Data;
 
 namespace apprest.Controllers
 {
     public class ClienteController : Controller
     {
-        private readonly MvcClienteContext _context;
+        private readonly ApplicationDbContext  _context;
 
-        public ClienteController(MvcClienteContext context)
+        public ClienteController(ApplicationDbContext  context)
         {
             _context = context;
         }

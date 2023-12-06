@@ -1,13 +1,19 @@
-// MvcIngredienteContext.cs
+// ApplicationDbContext.cs
 using Microsoft.EntityFrameworkCore;
 using apprest.Models;
 
-namespace MvcIngrediente.Data
+namespace MvcPlato.Data
 {
-    public class MvcIngredienteContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public DbSet<Ingrediente> Ingredientes { get; set; }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+
+        }
+
         public DbSet<Plato> Platos { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Ingrediente> Ingredientes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

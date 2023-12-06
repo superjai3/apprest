@@ -1,45 +1,39 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcPlato.Data;
 using apprest.Models;
-using Microsoft.Extensions.Logging.Abstractions;
 using apprest.ViewModels;
+using System.Collections.Generic;
 
 namespace apprest.Controllers
 {
     public class PlatoController : Controller
     {
-        private readonly MvcPlatoContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public PlatoController(MvcPlatoContext context)
+        public PlatoController(ApplicationDbContext context)
         {
             _context = context;
         }
 
         // GET: Plato
-        /*public async Task<IActionResult> Index()
-        {
-            return View(await _context.Platos.ToListAsync());
-        }*/
-
-         public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
             var platoListViewModel = new List<PlatoViewModel>();
 
-            if (_context.Platos == null){
-                    Problem("Emtity set 'MvcPlatoContext.Plato' is null.");
-                    }
+            // Verificar si _context.Platos es nulo antes de usarlo
+            if (_context.Platos == null)
+            {
+                return Problem("Entity set 'ApplicationDbContext.Platos' is null.");
+            }
+
             var platos = await _context.Platos.ToListAsync();
 
             foreach (var item in platos)
             {
                 platoListViewModel.Add(
-                    new PlatoViewModel {
+                    new PlatoViewModel
+                    {
                         Name = item.Name,
                         Pais = item.Pais,
                         Price = item.Price
@@ -74,8 +68,6 @@ namespace apprest.Controllers
         }
 
         // POST: Plato/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Pais,Tipo_Comida,Disponibilidad,Price")] Plato plato)
@@ -106,8 +98,6 @@ namespace apprest.Controllers
         }
 
         // POST: Plato/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Pais,Tipo_Comida,Disponibilidad,Price")] Plato plato)

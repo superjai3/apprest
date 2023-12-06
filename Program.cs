@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using MvcCliente.Data;
 using MvcPlato.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,11 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Configurar la base de datos (SQLite - MvcPlatoContext)
-ConfigureSqlite<MvcPlatoContext>(builder, "MvcPlatoContext");
-
-// Configurar la segunda base de datos (SQLite - MvcClienteContext)
-ConfigureSqlite<MvcClienteContext>(builder, "MvcClienteContext");
+// Configurar la base de datos (SQLite - ApplicationDbContext)
+ConfigureSqlite<ApplicationDbContext>(builder, "ApplicationDbContext");
 
 var app = builder.Build();
 
