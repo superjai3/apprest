@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andru\\Herramientas\\apprest\\apprest.csproj": {}
+    "C:\\Users\\jaime\\apprest\\apprest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andru\\Herramientas\\apprest\\apprest.csproj": {
+    "C:\\Users\\jaime\\apprest\\apprest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andru\\Herramientas\\apprest\\apprest.csproj",
+        "projectUniqueName": "C:\\Users\\jaime\\apprest\\apprest.csproj",
         "projectName": "apprest",
-        "projectPath": "C:\\Users\\andru\\Herramientas\\apprest\\apprest.csproj",
-        "packagesPath": "C:\\Users\\andru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andru\\Herramientas\\apprest\\obj\\",
+        "projectPath": "C:\\Users\\jaime\\apprest\\apprest.csproj",
+        "packagesPath": "C:\\Users\\jaime\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jaime\\apprest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\andru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jaime\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
